@@ -1,0 +1,194 @@
+package randomclass;
+import java.util.Scanner;
+public class MathApp {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n Java Math Utility App ");
+            System.out.println("--------------------------");
+            System.out.println("1. Power (a^b)");
+            System.out.println("2. Square Root");
+            System.out.println("3. Absolute Value");
+            System.out.println("4. Rounding");
+            System.out.println("5. Floor and Ceil");
+            System.out.println("6. Show Constants (PI & E)");
+            System.out.println("0. Exit");
+            System.out.print(" Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter base: ");
+                    double base = scanner.nextDouble();
+                    System.out.print("Enter exponent: ");
+                    double exponent = scanner.nextDouble();
+                    System.out.println("Result: " + Math.pow(base, exponent));
+                    break;
+
+                case 2:
+                    System.out.print("Enter number: ");
+                    double num = scanner.nextDouble();
+                    System.out.println("Square root: " + Math.sqrt(num));
+                    break;
+
+                case 3:
+                    System.out.print("Enter number: ");
+                    double absNum = scanner.nextDouble();
+                    System.out.println("Absolute value: " + Math.abs(absNum));
+                    break;
+
+                case 4:
+                    System.out.print("Enter decimal number: ");
+                    double roundNum = scanner.nextDouble();
+                    System.out.println("Rounded: " + Math.round(roundNum));
+                    break;
+
+                case 5:
+                    System.out.print("Enter decimal number: ");
+                    double dec = scanner.nextDouble();
+                    System.out.println("Floor: " + Math.floor(dec));
+                    System.out.println("Ceil: " + Math.ceil(dec));
+                    break;
+
+                case 6:
+                    System.out.println("PI: " + Math.PI);
+                    System.out.println("E: " + Math.E);
+                    break;
+
+                case 0:
+                    System.out.println(" Exiting... Thank you!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 0);
+
+        scanner.close();
+
+		
+	}
+
+}
+
+OUTPUT:
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 1
+Enter base: 3
+Enter exponent: 4
+Result: 81.0
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 2
+Enter number: 8
+Square root: 2.8284271247461903
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 3
+Enter number: -7
+Absolute value: 7.0
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 4
+Enter decimal number: 9.7
+Rounded: 10
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 5
+Enter decimal number: 6.8
+Floor: 6.0
+Ceil: 7.0
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 6
+PI: 3.141592653589793
+E: 2.718281828459045
+
+ Java Math Utility App 
+--------------------------
+1. Power (a^b)
+2. Square Root
+3. Absolute Value
+4. Rounding
+5. Floor and Ceil
+6. Show Constants (PI & E)
+0. Exit
+ Enter your choice: 0
+ Exiting... Thank you!
+
+
+
+
+🚀 Just built a **Java Math Utility Console App** as part of my Java learning journey!
+
+📐 Features:
+✅ Power calculation (a^b)
+✅ Square root function
+✅ Absolute value checker
+✅ Rounding numbers
+✅ Floor & Ceil operations
+✅ Constants like PI (π) and Euler’s number (e)
+
+💡 Built using:
+🟨 Java Core Concepts
+🛠️ Math class methods
+🎛️ Switch-case menu
+🔄 Loops & Scanner for user input
+
+🧠 This project helped me understand how to:
+- Use built-in Math methods
+- Take dynamic input from users
+- Implement interactive menu-driven logic in Java
+
