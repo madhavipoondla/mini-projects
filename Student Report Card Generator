@@ -1,0 +1,72 @@
+import java.util.Scanner;
+public class conditional {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" Report Card ");
+		System.out.println(" -------------------------------- ");
+		System.out.println("Enter student name: ");
+		 String name = sc.nextLine();
+		 System.out.println("Enter student roll number: ");
+		int rollNo = sc.nextInt(); 
+		System.out.println(" Enter marks in maths: ");
+		int maths = sc.nextInt();
+		System.out.println(" Enter marks in science: ");
+		int science = sc.nextInt();
+		System.out.println(" Enter marks in english: ");
+		int english = sc.nextInt();
+		sc.close();
+		int total = maths + science + english;
+		double percentage = total / 3.0;
+		String grade;
+		
+		if (percentage >= 90) {
+			grade = "A+";
+		} else if (percentage >= 80) {
+			grade = "A";
+		} else if (percentage >= 70) {
+			grade = "B";
+		} else if (percentage >= 60) {
+			grade = "C";
+		} else if (percentage >= 50) {
+			grade = "D";
+		} else {
+			grade = "fail";
+		}	
+        System.out.println("\n----------final report card----------");
+        System.out.println("Student Name  : " +name);
+        System.out.println("Roll Number     : " + rollNo);
+        System.out.println("Maths               : " + maths);
+        System.out.println("Science             : " + science);
+        System.out.println("English              : " + english);
+        System.out.println("Total Marks       : " + total);
+        System.out.println("Percentage        : " + percentage);
+        System.out.println("Grade                : " + grade);
+		}
+}
+
+OUTPUT:
+Report Card 
+ -------------------------------- 
+Enter student name: 
+PALLAVI
+Enter student roll number: 
+56
+ Enter marks in maths: 
+85
+ Enter marks in science: 
+78
+ Enter marks in english: 
+89
+
+----------final report card----------
+Student Name  : PALLAVI
+Roll Number     : 56
+Maths               : 85
+Science             : 78
+English              : 89
+Total Marks       : 252
+Percentage        : 84.0
+Grade                : A
+
+
