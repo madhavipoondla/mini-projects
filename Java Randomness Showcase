@@ -1,0 +1,48 @@
+🎯 Why Random is Used in Java
+The Random class is used when you want to:
+
+Generate random numbers (integers, doubles, booleans, etc.)
+
+Simulate randomness in games, testing, simulations, etc.
+
+Add unpredictability to decisions (like shuffling cards or selecting a random item)
+
+Create mock data for testing applications
+
+🔧 Where It’s Commonly Used
+Use Case	Example
+🎮 Games	Dice rolls, card shuffling, enemy movements
+🧪 Testing	Generate random test data (e.g., names, numbers)
+🎲 Simulations	Weather, traffic, stock prediction
+🧠 AI/ML	Random sampling, stochastic processes
+📱 Apps	OTP generation, random question selection
+
+
+
+package randomclass;
+import java.util.Random;
+
+
+public class random {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		int number;
+		double number1;
+		boolean isHeads;
+		number = random.nextInt(1,100);//integer values
+		number1 = random.nextDouble(1,500);//double values
+		isHeads = random.nextBoolean();//boolean values
+		
+		System.out.println(isHeads);
+		System.out.println(number1);
+		System.out.println(number);
+
+	}
+
+}
+
+OUTPUT:
+true
+424.4275052799784
+73
