@@ -1,0 +1,145 @@
+package randomclass;
+import java.util.Scanner;
+
+public class Compoundinterest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int choice;
+
+		do {
+			System.out.println("\n====== Interest Calculator ======");
+			System.out.println("1. Calculate Simple Interest");
+			System.out.println("2. Calculate Compound Interest");
+			System.out.println("3. Compare SI and CI");
+			System.out.println("4. Exit");
+			System.out.print("Enter your choice: ");
+			choice = sc.nextInt();
+
+			switch (choice) {
+				case 1:
+					calculateSimpleInterest(sc);
+					break;
+				case 2:
+					calculateCompoundInterest(sc);
+					break;
+				case 3:
+					compareInterest(sc);
+					break;
+				case 4:
+					System.out.println("Thank you for using the Interest Calculator.");
+					break;
+				default:
+					System.out.println("Invalid choice. Please try again.");
+			}
+		} while (choice != 4);
+
+		sc.close();
+	}
+
+	// Method to calculate Simple Interest
+	public static void calculateSimpleInterest(Scanner sc) {
+		System.out.print("Enter Principal: ");
+		double principal = sc.nextDouble();
+
+		System.out.print("Enter Time (in years): ");
+		int time = sc.nextInt();
+
+		System.out.print("Enter Rate of Interest: ");
+		double rate = sc.nextDouble();
+
+		double si = (principal * time * rate) / 100;
+		System.out.printf("Simple Interest = %.2f\n", si);
+	}
+
+	// Method to calculate Compound Interest
+	public static void calculateCompoundInterest(Scanner sc) {
+		System.out.print("Enter Principal: ");
+		double principal = sc.nextDouble();
+
+		System.out.print("Enter Time (in years): ");
+		int time = sc.nextInt();
+
+		System.out.print("Enter Rate of Interest: ");
+		double rate = sc.nextDouble();
+
+		double amount = principal * Math.pow(1 + rate / 100, time);
+		double ci = amount - principal;
+
+		System.out.printf("Compound Interest = %.2f\n", ci);
+		System.out.printf("Total Amount = %.2f\n", amount);
+	}
+
+	// Method to compare SI and CI
+	public static void compareInterest(Scanner sc) {
+		System.out.print("Enter Principal: ");
+		double principal = sc.nextDouble();
+
+		System.out.print("Enter Time (in years): ");
+		int time = sc.nextInt();
+
+		System.out.print("Enter Rate of Interest: ");
+		double rate = sc.nextDouble();
+
+		double si = (principal * time * rate) / 100;
+		double amount = principal * Math.pow(1 + rate / 100, time);
+		double ci = amount - principal;
+
+		System.out.printf("Simple Interest = %.2f\n", si);
+		System.out.printf("Compound Interest = %.2f\n", ci);
+
+		if (ci > si) {
+			System.out.println("Compound Interest is greater than Simple Interest.");
+		} else if (si > ci) {
+			System.out.println("Simple Interest is greater than Compound Interest.");
+		} else {
+			System.out.println("Both interests are equal.");
+		}
+	}
+}
+
+OUTPUT:
+
+====== Interest Calculator ======
+1. Calculate Simple Interest
+2. Calculate Compound Interest
+3. Compare SI and CI
+4. Exit
+Enter your choice: 1
+Enter Principal: 40000
+Enter Time (in years): 2
+Enter Rate of Interest: 5
+Simple Interest = 4000.00
+
+====== Interest Calculator ======
+1. Calculate Simple Interest
+2. Calculate Compound Interest
+3. Compare SI and CI
+4. Exit
+Enter your choice: 2
+Enter Principal: 40000
+Enter Time (in years): 2
+Enter Rate of Interest: 3
+Compound Interest = 2436.00
+Total Amount = 42436.00
+
+====== Interest Calculator ======
+1. Calculate Simple Interest
+2. Calculate Compound Interest
+3. Compare SI and CI
+4. Exit
+Enter your choice: 3
+Enter Principal: 40000
+Enter Time (in years): 3
+Enter Rate of Interest: 5
+Simple Interest = 6000.00
+Compound Interest = 6305.00
+Compound Interest is greater than Simple Interest.
+
+====== Interest Calculator ======
+1. Calculate Simple Interest
+2. Calculate Compound Interest
+3. Compare SI and CI
+4. Exit
+Enter your choice: 4
+Thank you for using the Interest Calculator.
